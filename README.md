@@ -101,17 +101,3 @@ AI_Resume_Analyzer/
 - Add a local history of reports and score comparisons.
 - Add tests with mocked Claude API responses.
 
-## Push to GitHub
-
-Create a new empty repository on GitHub named `AI_Resume_Analyzer` (do not initialize it with a README), then run these commands from this project folder. Replace `YOUR_USERNAME` with your GitHub username:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: AI Resume Analyzer"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/AI_Resume_Analyzer.git
-git push -u origin main
-```
-
-If GitHub asks for authentication, complete the browser sign-in or use a personal access token when prompted for a password. Confirm `ANTHROPIC_API_KEY` was never saved in a file before running `git add .`.
