@@ -93,11 +93,4 @@ AI_Resume_Analyzer/
 └── .gitignore
 ```
 
-## Possible extensions
-
-- Add PDF/DOCX text extraction.
-- Add a web UI with upload support.
-- Analyze batches of resumes against one role.
-- Add a local history of reports and score comparisons.
-- Add tests with mocked Claude API responses.
 
