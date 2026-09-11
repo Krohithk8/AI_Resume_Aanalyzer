@@ -1,0 +1,29 @@
+MAYA PATEL
+Software Developer | Austin, TX | maya.patel@example.com | github.com/mayapatel
+
+SUMMARY
+Software developer with 3 years of experience building web applications and APIs. Interested in backend systems and solving problems.
+
+EXPERIENCE
+Software Developer, Brightpath Learning | Austin, TX | June 2023 - Present
+- Worked on backend features for an online learning platform used by thousands of students.
+- Helped build APIs using Python and Django.
+- Improved parts of the database and fixed production bugs.
+- Collaborated with product managers and designers to ship new features.
+
+Junior Software Developer, Northstar Apps | Austin, TX | July 2021 - May 2023
+- Built and maintained web application features using JavaScript, React, and Node.js.
+- Wrote tests and participated in code reviews.
+- Helped move some services to AWS.
+- Made the application faster and improved the user experience.
+
+PROJECTS
+TaskTrack | Python, Flask, SQLite
+- Created a simple task management API with user authentication and CRUD endpoints.
+- Added unit tests and documentation.
+
+EDUCATION
+B.S. Computer Science, Texas State University | 2021
+
+SKILLS
+Python, Django, Flask, JavaScript, React, Node.js, SQL, PostgreSQL, Git, AWS, Docker, REST APIs, pytest
