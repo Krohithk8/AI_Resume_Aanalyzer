@@ -10,7 +10,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-MODEL = "claude-sonnet-4-5"
+# Fast and cost-conscious for an interactive portfolio demo.
+MODEL = "claude-haiku-4-5-20251001"
 REQUIRED_KEYS = {
     "match_score",
     "summary",
@@ -151,7 +152,6 @@ def analyze_resume(resume: str, job_description: str | None, api_key: str) -> di
     response = client.messages.create(
         model=MODEL,
         max_tokens=1800,
-        temperature=0,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": build_user_prompt(resume, job_description)}],
     )

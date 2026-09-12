@@ -1,6 +1,6 @@
 # AI Resume Analyzer
 
-AI Resume Analyzer is a small command-line portfolio project that uses Anthropic Claude to review a plain-text resume. Give it a job description to assess role fit, identify missing ATS keywords, and propose fact-preserving stronger bullet points; omit the job description for a general quality review.
+AI Resume Analyzer is a Streamlit portfolio project that uses Anthropic Claude to review a resume. Upload a TXT, PDF, or DOCX resume, optionally add a job description, and receive a role-fit assessment, missing ATS keywords, and fact-preserving bullet-point improvements. The original command-line interface remains available too.
 
 It is useful for job seekers who want a quick, structured second pass before applying, while keeping the final judgment with the candidate. The model is explicitly instructed to rely on the supplied resume rather than inventing achievements.
 
@@ -18,6 +18,12 @@ pip install -r requirements.txt
 export ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
+Or create `.env` from the example file and add your key:
+
+```bash
+cp .env.example .env
+```
+
 If your computer does not already have Python 3.10+, create the virtual
 environment with any current Python installation instead. VS Code is configured
 to automatically use `.venv/bin/python` once the environment exists.
@@ -26,26 +32,36 @@ Never put an API key in the source code, commit it to Git, or share it in a scre
 
 ## Usage
 
-Analyze the included resume against the included backend role:
+### Streamlit interface
+
+```bash
+streamlit run app.py
+```
+
+Open `http://localhost:8501`, upload your resume and optional job description, then click **Analyze resume**.
+
+### Command line
+
+Analyze a local text resume against a local job description:
 
 ```bash
 python resume_analyzer.py \
-  --resume sample_data/resume.txt \
-  --jd sample_data/job_description.txt
+  --resume /path/to/resume.txt \
+  --jd /path/to/job_description.txt
 ```
 
 Run a general resume-quality evaluation without a job description:
 
 ```bash
-python resume_analyzer.py --resume sample_data/resume.txt
+python resume_analyzer.py --resume /path/to/resume.txt
 ```
 
 Print the readable report and also save the full structured JSON response:
 
 ```bash
 python resume_analyzer.py \
-  --resume sample_data/resume.txt \
-  --jd sample_data/job_description.txt \
+  --resume /path/to/resume.txt \
+  --jd /path/to/job_description.txt \
   --output reports/maya-patel-backend.json
 ```
 
@@ -85,12 +101,9 @@ Actual scores and recommendations vary with the model response and the content s
 ```text
 AI_Resume_Analyzer/
 ├── resume_analyzer.py
+├── app.py
 ├── requirements.txt
-├── sample_data/
-│   ├── resume.txt
-│   └── job_description.txt
+├── .env.example
 ├── README.md
 └── .gitignore
 ```
-
-
